@@ -70,24 +70,44 @@
 // console.log("Three")
 
 
-setTimeout(()=>{
-    console.log("One")
-    setTimeout(()=>{    
-        console.log("Two")
-        setTimeout(()=>{
-            console.log("Three")
-            setTimeout(()=>{
-                console.log("Four")
-                setTimeout(()=>{
-                    console.log("Five")
-                    setTimeout(()=>{
-                        console.log("Six")
-                          setTimeout(()=>{
-                            console.log("Seven")
-                          },100)
-                    },100)
-                },100)
-            },100)
-        },100)
-    },100)
-},100);
+// setTimeout(()=>{
+//     console.log("One")
+//     setTimeout(()=>{    
+//         console.log("Two")
+//         setTimeout(()=>{
+//             console.log("Three")
+//             setTimeout(()=>{
+//                 console.log("Four")
+//                 setTimeout(()=>{
+//                     console.log("Five")
+//                     setTimeout(()=>{
+//                         console.log("Six")
+//                           setTimeout(()=>{
+//                             console.log("Seven")
+//                           },100)
+//                     },100)
+//                 },100)
+//             },100)
+//         },100)
+//     },100)
+
+// },100);
+
+
+const myPromise = new Promise((resolve, reject)=>{
+const username = "admin";
+const password = "password";
+if(username === "admin" && password === "password"){
+    resolve("Login successful!");
+} else {
+    reject("Invalid username or password");
+}
+})
+
+myPromise.then((msg)=>{
+    console.log(msg);
+}).catch((error)=>{
+    console.log(error);
+}).finally(()=>{
+    console.log("Promise is settled");
+})
