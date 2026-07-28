@@ -24,13 +24,11 @@
 // data("and Node");
 
 
-
 // IIFE (Immediately Invoked Function Expression)
 
 // (()=>{
 //     console.log("Hey.. using and calling by IIFE");
 // })();
-
 
 
 //CALLBACK FUNCTION
@@ -46,22 +44,27 @@
 // sumwithMsg(sum,"Abhishek");
 
 
-function login(msg, error){
-    if(error){
-        console.log("Error is : "+error);
-    }
-    else{
-        console.log(msg);
-    }
-}
+// function login(msg, error){
+//     if(error){
+//         console.log("Error is : "+error);
+//     }
+//     else{
+//         console.log(msg);
+//     }
+// }
 
-function loginHandler(username, password, clbk ){
-    if(username === "admin" && password === "password"){
-        clbk("Login successful!", null);
-    }
-    else{
-        clbk(null, "Invalid username or password");
-    }
-}
+// function loginHandler(username, password, clbk ){
+//     if(username === "admin" && password === "password"){
+//         clbk("Login successful!", null);
+//     }
+//     else{
+//         clbk(null, "Invalid username or password");
+//     }
+// }
+// loginHandler("admin", "password", login);
 
-loginHandler("admin", "password", login);
+console.log("One")
+setTimeout(()=>{
+    console.log("Two")
+}, 100);
+console.log("Three")
