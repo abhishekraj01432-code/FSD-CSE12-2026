@@ -104,10 +104,41 @@ if(username === "admin" && password === "password"){
 }
 })
 
-myPromise.then((msg)=>{
-    console.log(msg);
-}).catch((error)=>{
-    console.log(error);
-}).finally(()=>{
-    console.log("Promise is settled");
-})
+const secondPromise = new Promise((resolve, reject) => {
+    const marks = 85;
+
+    if (marks >= 40) {
+        resolve("You Passed the Exam!");
+    } else {
+        reject(" You Failed the Exam!");
+    }
+});
+
+
+
+// myPromise.then((msg)=>{
+//     console.log(msg);
+// }).catch((error)=>{
+//     console.log(error);
+// }).finally(()=>{
+//     console.log("Promise is settled");
+// })
+
+
+async function handleData() {
+    try {
+        const msg = await myPromise;
+        console.log(msg);
+
+        const resmsg = await secondPromise;
+        console.log(resmsg);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log("Promise execution completed.");
+    }
+}
+
+handleData();
+
+
