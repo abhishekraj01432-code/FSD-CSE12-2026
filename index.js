@@ -94,25 +94,21 @@
 // },100);
 
 
-const myPromise = new Promise((resolve, reject)=>{
-const username = "admin";
-const password = "password";
-if(username === "admin" && password === "password"){
-    resolve("Login successful!");
-} else {
-    reject("Invalid username or password");
-}
-})
+// const myPromise = new Promise((resolve, reject)=>{
+// const username = "admin";
+// const password = "password";
+// if(username === "admin" && password === "password"){
+//     resolve("Success");
+// } else {
+//     reject("Invalid username or password");
+// }
+// })
 
-const secondPromise = new Promise((resolve, reject) => {
-    const marks = 85;
-
-    if (marks >= 40) {
-        resolve("You Passed the Exam!");
-    } else {
-        reject(" You Failed the Exam!");
-    }
-});
+// const orderReceive = new Promise((resolve, reject) => {
+   
+//         resolve("Order Received");
+    
+// });
 
 
 
@@ -125,20 +121,103 @@ const secondPromise = new Promise((resolve, reject) => {
 // })
 
 
-async function handleData() {
-    try {
-        const msg = await myPromise;
-        console.log(msg);
+// async function handleData() {
+//     try {
+//         const msg = await myPromise;
+//         if (msg === "Success") {
+//             const orderMsg = await orderReceive;
+//             setTimeout(() => {
+//                 console.log(orderMsg);
+//             }, 1000);
+//         }
+      
 
-        const resmsg = await secondPromise;
-        console.log(resmsg);
-    } catch (error) {
-        console.log(error);
-    } finally {
-        console.log("Promise execution completed.");
-    }
+       
+//     } catch (error) {
+//         console.log(error);
+//     } finally {
+//         console.log("Promise execution completed.");
+//     }
+// }
+
+// handleData();
+
+
+// function OrderReceive() {
+//   return  new Promise((reslove) => {
+//         setTimeout(() => {
+//             reslove("Order Received");
+//         }, 1000);
+
+//     })
+// }
+
+
+
+// orderReceive().then((status)=>{
+//     console.log(status);
+// }).catch((error)=>{
+//     console.log(error);
+// }).finally(()=>{
+//     console.log("Order process completed.");
+// })
+
+
+// function OrderPrepare() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Order Prepared");
+//         }, 2000);
+//     });
+// }
+
+
+
+// function OrderDispatch() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Order Dispatched");
+//         }, 3000);
+//     });
+// }
+
+
+// function OrderDelivered() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Order Delivered");
+//         }, 4000);
+//     });
+// }
+
+// async function orderHandler() {
+//     try {
+//         const received = await OrderReceive();
+//         console.log(received);
+
+//         const prepared = await OrderPrepare();
+//         console.log(prepared);
+
+//         const dispatched = await OrderDispatch();
+//         console.log(dispatched);
+
+//         const delivered = await OrderDelivered();
+//         console.log(delivered);
+
+//         console.log("Order process completed.");
+//     } catch (error) {
+//         console.log(error);
+//     }
+// // }
+
+// orderHandler();
+
+async function fetchData() {
+    const serverData = await fetch("https://fakestoreapi.com/products")
+       const jsonData = await serverData.json();
+    console.log(jsonData);
 }
+fetchData();
 
-handleData();
 
 
