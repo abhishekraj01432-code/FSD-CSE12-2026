@@ -209,20 +209,29 @@
 //         console.log(error);
 //     }
 // // }
-
 // orderHandler();
-const button = document.getElementById("btn");
-const container = document.getElementById("container");
+
+
+const button = document.getElementById('btn');
+const container = document.getElementById('container');
 console.log(button);
 async function fetchData() {
+    try {
+        // loading.innerHTML = '<h2>Loading...</h2>'
     const serverData = await fetch("https://fakestoreapi.com/products")
        const jsonData = await serverData.json();
-    // console.log(jsonData);
-    container.innerHTML = 'JSON.stringify(${jsonData})'
+    console.log(jsonData);
+    // container.innerHTML = 'JSON.stringify(${jsonData})'
+} catch (e) {
+    // loading.innerHTML='<h2>Something went wrong</h2>'
+}
+finally {
+    // loading.innerHTML = '';
+}
 }
 
 button.addEventListener('click', fetchData)
-// fetchData();
+fetchData();
 
 
 
