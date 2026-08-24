@@ -36,38 +36,32 @@ function buildResume() {
         const left4 = document.createElement("td");
         const right4 = document.createElement("td");
 
-        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSwRHgONzy5Kh1V3_3wUTn9dPqNww-egjEpuauzyjm2b5mXuDDaQNh8dYK&s=10";
+        img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS34yMVI5mHmdgjrBglT67YZsfTeG86WxfVgqtgNhtPAg&s=10";
         img.setAttribute("width", "100");
         img.setAttribute("height", "100");
         img.style.borderRadius = "50%";
-        h2.style.marginLeft = "160px";
+        h2.style.marginLeft = "130px";
         h2.style.fontWeight = "bold";
-        h2.style.fontSize = "45px";
+        h2.style.fontSize = "40px";
 
         left1.appendChild(img);
-        right1.innerText = "Abhishek Verma";
+        right1.innerHTML = "Abhishek Verma";
         right1.style.fontWeight = "bold";
         right1.style.fontSize = "35px";
 
-        left2.innerText = "Skill ";
-                left2.style.fontWeight = "bold";    
+        left2.innerHTML = "Skill "; 
         left2.style.fontSize = "25px";
-        right2.innerText = "CSE";
-        right2.style.fontWeight = "bold";
+        right2.innerHTML = "CSE";
         right2.style.fontSize = "25px";
 
-        left3.innerText = "Stream";
-                left3.style.fontWeight = "bold";    
+        left3.innerHTML = "Stream";  
         left3.style.fontSize = "25px";
-        right3.innerText = "B.Tech";
-        right3.style.fontWeight = "bold";
+        right3.innerHTML = "B.Tech";
         right3.style.fontSize = "25px";
 
-        left4.innerText = "Qualification";
-        left4.style.fontWeight = "bold";
+        left4.innerHTML = "Qualification";
         left4.style.fontSize = "25px";
         right4.innerText = "Full Stack Developer";
-        right4.style.fontWeight = "bold";
         right4.style.fontSize = "25px";
 
         row1.appendChild(left1);
