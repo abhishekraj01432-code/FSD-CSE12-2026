@@ -97,3 +97,4 @@ const shopping =
     }
   }]
   console.log(shopping[0].rating.count)
+  
