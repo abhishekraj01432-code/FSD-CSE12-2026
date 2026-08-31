@@ -91,5 +91,4 @@ function buildResume() {
         root.removeChild(loader);
     }
 }
-
 btn.addEventListener("click", buildResume);
