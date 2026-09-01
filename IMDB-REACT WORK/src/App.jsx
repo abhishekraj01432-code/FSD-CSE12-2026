@@ -3,17 +3,17 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import Icard from './Components/Icard'
+import Icard from './Components/Card'
 import Gallery from './Components/Gallery'
 
-function App() {
+function CardGallery() {
+  
 
   return (
     <div>
-      <Gallery/>
-      
+     < Gallery/>
     </div>
   )
 }
 
-export default App
+export default CardGallery
