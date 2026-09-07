@@ -5,12 +5,16 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Icard from './Components/Icard'
 import Gallery from './Components/Gallery'
+import ReactHook from './Components/ReactHook'
+import ImageManupulation from './Components/ImageManupulation'
 
 function App() {
 
   return (
     <div>
-      <Gallery/>
+      {/* <Gallery/> */}
+      {/* <ReactHook/> */}
+      <ImageManupulation/>
       
     </div>
   )
