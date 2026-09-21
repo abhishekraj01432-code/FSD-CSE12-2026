@@ -58,13 +58,9 @@ function MoveDown() {
   return (
     <div>
         <h2 style={{color: "white", backgroundColor: "blue"}}>Image Manipulation using React</h2>
-        <div style={{border: "2px solid red", height: "300px", width: "400px", marginLeft: `${marginLeft}px`, marginTop: `${marginTop}px`}}>
-       <img src={Cat} height={height} width={width} style={{backgroundColor: `rgb(${red}, ${green}, ${blue})`, transform: `rotate(${angle}deg)`}}/>
+        <div style={{border: "2px solid red", height: "300px", width: "400px"}}>
+        <img src={Cat} height={height} width={width} style={{backgroundColor: `rgb(${red}, ${green}, ${blue})`, transform: `rotate(${angle}deg)`, marginLeft: `${marginLeft}px`, marginTop: `${marginTop}px`}}/>
        
-        </div>
-        <div>
-            <button onClick={MoveUp}>MoveUp</button>
-            <button onClick={MoveDown}>MoveDown</button>
         </div>
         <button onClick={EnhanceHeight}>EnhanceHeight</button>
         <button onClick={EnhanceWidth}>EnhanceWidth</button>
@@ -74,6 +70,10 @@ function MoveDown() {
         <button onClick={RotateImage}>RotateCat</button>
         <button onClick={MoveRight}>MoveRight</button>
         <button onClick={MoveLeft}>MoveLeft</button>
+        <button onClick={MoveUp}>MoveUp</button>
+        <button onClick={MoveDown}>MoveDown</button>
+
+
         <div>
         <h2>Height = {height}</h2>
         <h2>Width = {width}</h2>
